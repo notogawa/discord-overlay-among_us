@@ -82,54 +82,90 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  float: right;
+}
+
+.voice-states {
+  margin: 0;
+  padding: 0;
+}
+
+.avatar {
+  border: 0 !important;
+  height: 100px !important;
+  width: 100px !important;
+  border-radius: 0 !important;
+}
+
+.user .name {
+  width: 100px !important;
+  position: relative;
+  overflow: visible;
+  top: -26px;
+  display: inline-block;
 }
 
 .avatar.speaking + .user .name {
   background: #41DAC6 !important;
 }
 
-.user .name {
-  position: relative;
-  overflow: visible;
-  display: inline-block;
-}
-
 .user .name::before {
   position: absolute;
-  top: -50px;
-  left: -150px;
+  top: -80px;
+  left: -50px;
+  z-index: -1;
   content: "";
   display: block;
   width: 90px;
   height: 115px;
   background-image: url(https://notogawa.github.io/discord-overlay-among_us/players.png);
   background-size: 1080px auto;
-  transform: scale(0.75);
+  transform: scale(-0.75, 0.75) rotate(30deg);
 }
 
 .avatar + .user .name::before {
   transition: all 0.05s 0s ease-in-out;
+/*  animation: mozomozo 2s ease 0.1s infinite alternate none running; */
 }
 
 .avatar.speaking + .user .name::before {
-  transform: translateX(-15px) scale(-1, 1);
-  animation: rotation 0.75s ease 0.1s infinite alternate none running;
+  z-index: 1;
+  transform: translateX(-35px) scale(-1, 1);
+  animation: pyonpyon 0.5s ease 0.1s infinite alternate none running;
 }
 
 li.voice-state {
+  height: 100px !important;
+  width: 100px !important;
+  margin: 0 !important;
+  padding: 0 !important;
   display: none;
   padding: 20px 0 0 90px;
+  display: inline-block;
+  position: relative;
 }
 
-@keyframes rotation {
+@keyframes pyonpyon {
   0% {
-    transform: translateX(-15px) scale(-1, 1);
+    transform: translateX(-35px) scale(-1, 1);
   }
   50% {
-    transform: translateX(-15px) scale(-1.1, 0.85);
+    transform: translateX(-35px) scale(-1.1, 0.85);
   }
   100% {
-    transform: translateX(-15px) scale(-1, 1);
+    transform: translateX(-35px) scale(-1, 1);
+  }
+}
+
+@keyframes mozomozo {
+  0% {
+    transform: scale(-0.75, 0.75) rotate(30deg);
+  }
+  80% {
+    transform: scale(-0.75, 0.75) rotate(15deg);
+  }
+  100% {
+    transform: scale(-0.75, 0.75) rotate(30deg);
   }
 }
 ` + player_colors.map((player_color, index) => {
