@@ -1,9 +1,15 @@
 .App {
+  padding: 5px;
   text-align: left;
 }
 
+.App ul {
+  padding-inline-start: 0px;
+}
+
 .App .players {
-  width: 200px;
+  width: 220px;
+  padding-left: 0px;
   margin: 10px;
   float: left;
 }

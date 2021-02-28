@@ -76,7 +76,7 @@ class App extends Component {
   }
   
   genetate_css = () => {
-    return `
+    return `/* Created by https://notogawa.github.io/discord-overlay-among_us/ */
 body {
   background-color: rgba(0, 0, 0, 0);
   margin: 0;
@@ -102,7 +102,7 @@ body {
   display: block;
   width: 90px;
   height: 115px;
-  background-image: url(https://user-images.githubusercontent.com/372530/109404163-caddd600-79a6-11eb-9e93-8cdf5d469d33.png);
+  background-image: url(https://notogawa.github.io/discord-overlay-among_us/players.png);
   background-size: 1080px auto;
   transform: scale(0.75);
 }
