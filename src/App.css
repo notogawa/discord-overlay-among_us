@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
+  text-align: left;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App .players {
+  width: 200px;
+  margin: 10px;
+  float: left;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App .style {
+  margin: 10px;
+  width: 60vw;
+  height: 90vh;
+  overflow: scroll;
+  float: left;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .style textarea {
+  width: 100%;
+  height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.App li {
+  list-style: none;
+  width: 20vw;
+  padding: 0px;
+  clear: both;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App li .chara {
+  display: inline-block;
+  margin: 4px;
+  width: 32px;
+  height: 46px;
+  overflow: hidden;
+  float: left;
+}
+
+.App li .form {
+  display: inline-block;
+  margin: 4px;
+  overflow: hidden;
+  float: left;
+}
+
+.App li .form input {
+  width: 80%;
+}
+
+.App li .chara img {
+  width: 432px;
+  height: auto;
+  transform: scale(1);
+}
+
+.App li.used .chara img {
+  margin-top: -46px;
+}
+
+.App li.red .chara img {
+  margin-left: -0px;
+}
+
+.App li.blue .chara img {
+  margin-left: -36px;
+}
+
+.App li.green .chara img {
+  margin-left: -72px;
+}
+
+.App li.pink .chara img {
+  margin-left: -108px;
+}
+
+.App li.orange .chara img {
+  margin-left: -144px;
+}
+
+.App li.yellow .chara img {
+  margin-left: -180px;
+}
+
+.App li.black .chara img {
+  margin-left: -216px;
+}
+
+.App li.white .chara img {
+  margin-left: -252px;
+}
+
+.App li.purple .chara img {
+  margin-left: -288px;
+}
+
+.App li.brown .chara img {
+  margin-left: -324px;
+}
+
+.App li.cyan .chara img {
+  margin-left: -360px;
+}
+
+.App li.lime .chara img {
+  margin-left: -396px;
 }
