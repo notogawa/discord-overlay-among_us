@@ -46,7 +46,7 @@ class App extends Component {
 
     return (
       <div className="App">
-        <h1>Discord StreamKit Overlay ID Mapper for Among Us</h1>
+        <h1>Discord StreamKit Overlay Custom CSS Generator for Among Us Streamer</h1>
         <div className="players">
           <ul>
             {player_colors.map((player_color,_index) => {
