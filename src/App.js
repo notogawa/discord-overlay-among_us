@@ -1,5 +1,8 @@
 import { React, Component } from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import './App.css';
 import 'react-tabs/style/react-tabs.css';
 
@@ -16,7 +19,7 @@ const player_colors = [
   "brown",
   "cyan",
   "lime",
-];
+]
 
 class App extends Component {
   
@@ -41,7 +44,7 @@ class App extends Component {
   render() {
     
     const color_used = (player_color) => {
-      return this.state[player_color] === "" ? player_color : (player_color + " used");
+      return this.state[player_color] === "" ? player_color : (player_color + " used")
     }
 
     return (
@@ -72,18 +75,22 @@ class App extends Component {
             </TabList>
             <TabPanel>
               <div className="style">
-                <textarea readOnly ref={(code) => this.code = code} value={this.genetate_css()} onClick={this.copyToClipboard}/>
+                <CopyToClipboard text={this.genetate_css()}>
+                  <SyntaxHighlighter language="css" style={docco}>
+                    {this.genetate_css()}
+                  </SyntaxHighlighter>
+                </CopyToClipboard>
               </div>
             </TabPanel>
             <TabPanel>
               <div className="demo">
-                <iframe width="873" height="491" src="https://www.youtube.com/embed/-4H-KxnMSKQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe title="demo" width="873" height="491" src="https://www.youtube.com/embed/-4H-KxnMSKQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
               </div>
             </TabPanel>
           </Tabs>
         </div>
       </div>
-    );
+    )
   }
   
   handleChange = (event) => {
@@ -196,11 +203,6 @@ li.voice-state[data-reactid*="${this.state[player_color]}"] .avatar.speaking +  
 }
 `}).reduce((prev, curr) => prev + curr)
   }
-  
-  copyToClipboard = (e) => {
-    this.code.select();
-    document.execCommand('copy');
-  };
 }
 
 export default App;

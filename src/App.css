@@ -26,11 +26,12 @@
 
 .App .demo {
   padding: 10px;
+  width: 100%;
 }
 
 .App .style {
   padding: 10px;
-  width: 60vw;
+  width: 100%;
   height: 90vh;
 }
 
