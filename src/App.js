@@ -145,7 +145,6 @@ li.voice-state {
   padding: 0 !important;
   display: none;
   padding: 20px 0 0 90px;
-  display: inline-block;
   position: relative;
 }
 
