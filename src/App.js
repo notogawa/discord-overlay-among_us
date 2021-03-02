@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import { React, Component } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './App.css';
+import 'react-tabs/style/react-tabs.css';
 
 const player_colors = [
   "red",
@@ -42,8 +44,6 @@ class App extends Component {
       return this.state[player_color] === "" ? player_color : (player_color + " used");
     }
 
-    console.log(this.state);
-
     return (
       <div className="App">
         <h1>Discord StreamKit Overlay Custom CSS Generator for Among Us Streamer</h1>
@@ -64,12 +64,23 @@ class App extends Component {
             })}
           </ul>
         </div>
-        <div className="demo">
-          <iframe width="873" height="491" src="https://www.youtube.com/embed/-4H-KxnMSKQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div className="style">
-          <h2>CSS</h2>
-          <textarea readOnly ref={(code) => this.code = code} value={this.genetate_css()} onClick={this.copyToClipboard}/>
+        <div className="tabs">
+          <Tabs>
+            <TabList>
+              <Tab>CSS</Tab>
+              <Tab>Demo</Tab>
+            </TabList>
+            <TabPanel>
+              <div className="style">
+                <textarea readOnly ref={(code) => this.code = code} value={this.genetate_css()} onClick={this.copyToClipboard}/>
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <div className="demo">
+                <iframe width="873" height="491" src="https://www.youtube.com/embed/-4H-KxnMSKQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </TabPanel>
+          </Tabs>
         </div>
       </div>
     );

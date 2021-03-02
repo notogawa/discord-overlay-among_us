@@ -1,6 +1,11 @@
 .App {
   padding: 5px;
   text-align: left;
+  width: 100%;
+}
+
+.App h1 {
+  margin: 10px;
 }
 
 .App ul {
@@ -10,15 +15,23 @@
 .App .players {
   width: 220px;
   padding-left: 0px;
-  margin: 10px;
+  padding: 10px;
   float: left;
 }
 
+.App .tabs {
+  padding: 10px;
+  float: left;
+}
+
+.App .demo {
+  padding: 10px;
+}
+
 .App .style {
-  margin: 10px;
+  padding: 10px;
   width: 60vw;
   height: 90vh;
-  float: left;
 }
 
 .App .style textarea {
