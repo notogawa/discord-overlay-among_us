@@ -68,7 +68,7 @@
 }
 
 .App li .chara img {
-  width: 432px;
+  width: 648px;
   height: auto;
   transform: scale(1);
 }
@@ -123,4 +123,28 @@
 
 .App li.lime .chara img {
   margin-left: -396px;
+}
+
+.App li.maroon .chara img {
+  margin-left: -432px;
+}
+
+.App li.rose .chara img {
+  margin-left: -468px;
+}
+
+.App li.banana .chara img {
+  margin-left: -504px;
+}
+
+.App li.gray .chara img {
+  margin-left: -540px;
+}
+
+.App li.tan .chara img {
+  margin-left: -576px;
+}
+
+.App li.coral .chara img {
+  margin-left: -612px;
 }

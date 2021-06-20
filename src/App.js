@@ -19,6 +19,12 @@ const player_colors = [
   "brown",
   "cyan",
   "lime",
+  "maroon",
+  "rose",
+  "banana",
+  "gray",
+  "tan",
+  "coral",
 ]
 
 class App extends Component {
@@ -38,6 +44,12 @@ class App extends Component {
       brown: "",
       cyan: "",
       lime: "",
+      maroon: "",
+      rose: "",
+      banana: "",
+      gray: "",
+      tan: "",
+      coral: "",
     }
   }
   
