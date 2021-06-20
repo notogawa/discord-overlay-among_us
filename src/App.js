@@ -153,7 +153,7 @@ body {
   width: 90px;
   height: 115px;
   background-image: url(https://notogawa.github.io/discord-overlay-among_us/players.png);
-  background-size: 1080px auto;
+  background-size: 1620px auto;
   transform: scale(-0.75, 0.75) rotate(30deg);
 }
 
